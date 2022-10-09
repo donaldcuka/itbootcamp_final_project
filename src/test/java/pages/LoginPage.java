@@ -10,7 +10,6 @@ public class LoginPage extends BasePage {
     protected By email = By.id("email");
     protected By password = By.id("password");
     protected By loginBtn = By.xpath("//*[@id=\"app\"]/div/main/div/div[2]/div/div/div[3]/span/form/div/div[3]/button");
-
     protected Faker faker = new Faker();
 
 

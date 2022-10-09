@@ -8,7 +8,8 @@ public class HomePage extends BasePage  {
 
     protected By home = By.xpath("//*[@id=\"app\"]/div/div/header/div/div[3]/a[1]/span");
     protected By about = By.xpath("//*[@id=\"app\"]/div/div/header/div/div[3]/a[2]/span");
-    protected By login = By.xpath("//*[@id=\"app\"]/div/div/header/div/div[3]/a[3]");
+
+    protected By loginBtn = By.xpath("//*[@id=\"app\"]/div/div/header/div/div[3]/a[3]");
     protected By signUp = By.xpath("//*[@id=\"app\"]/div/div/header/div/div[3]/a[4]/span");
     protected By switchTheme = By.id("input-26");
     protected By logoutBtn = By.xpath("//*[@id=\"app\"]/div[1]/div/header/div/div[3]/button[2]");
@@ -27,8 +28,8 @@ public class HomePage extends BasePage  {
         return getDriver().findElement(about);
     }
 
-    public WebElement getLogin() {
-        return getDriver().findElement(login);
+    public WebElement getLoginBtn() {
+        return getDriver().findElement(loginBtn);
     }
 
     public WebElement getSignUp() {
@@ -48,7 +49,7 @@ public class HomePage extends BasePage  {
     }
 
     public void login(){
-        getLogin().click();
+        getLoginBtn().click();
     }
 
     public void logout(){

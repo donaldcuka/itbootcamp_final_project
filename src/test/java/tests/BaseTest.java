@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.SignUpPage;
 
 import java.time.Duration;
 
@@ -15,6 +16,8 @@ public abstract class BaseTest {
     protected WebDriver driver;
     protected LoginPage loginPage;
     protected HomePage homePage;
+
+    protected SignUpPage signUpPage;
 
 
     @BeforeClass
@@ -26,6 +29,7 @@ public abstract class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
+        signUpPage = new SignUpPage(driver);
 
     }
 

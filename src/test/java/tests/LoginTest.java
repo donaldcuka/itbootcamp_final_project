@@ -41,7 +41,7 @@ public class LoginTest extends BaseTest {
     // Test #3: Displays errors when user does not exist
 
     @Test
-    public void displaysErrors(){
+    public void displaysErrorsNoUser(){
         homePage.login();
         loginPage.fakerLogin();
 
@@ -58,7 +58,7 @@ public class LoginTest extends BaseTest {
     //  Test #4: Displays errors when password is wrong
 
     @Test
-    public void wrongPassword() {
+    public void displayErrorsWrongPassword() {
         homePage.login();
         loginPage.wrongPass("wR0nG");
         WebElement closeBtn = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/main/div/div[2]/div/div/div[4]/div/div/div/div/div[1]"));
@@ -86,6 +86,7 @@ public class LoginTest extends BaseTest {
     public void logout() {
         homePage.login();
         loginPage.login();
+
         Assert.assertTrue(homePage.getLogoutBtn().isDisplayed());
         homePage.logout();
 
