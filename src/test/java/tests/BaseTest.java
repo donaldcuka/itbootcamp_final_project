@@ -5,10 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import pages.AdminCitiesPage;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.SignUpPage;
+import pages.*;
 
 import java.time.Duration;
 
@@ -22,6 +19,8 @@ public abstract class BaseTest {
 
     protected AdminCitiesPage adminCitiesPage;
 
+    protected ProfilePage profilePage;
+
 
     @BeforeClass
     public void beforeClass(){
@@ -33,7 +32,7 @@ public abstract class BaseTest {
         homePage = new HomePage(driver);
         signUpPage = new SignUpPage(driver);
         adminCitiesPage = new AdminCitiesPage(driver);
-
+        profilePage = new ProfilePage(driver);
     }
 
     @AfterClass
