@@ -64,7 +64,4 @@ public class LoginPage extends BasePage {
     }
 
 
-    public String getAttribute(){
-        return  getEmail().getAttribute("type");
-    }
 }

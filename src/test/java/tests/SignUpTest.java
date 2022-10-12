@@ -43,7 +43,7 @@ public class SignUpTest extends BaseTest{
     @Test
     public void displayErrors() {
         homePage.signup();
-        signUpPage.signUp("Test Test", "admin@admin.com", "wr000ng", "wr000ng");
+        signUpPage.signUp("Testing", "admin@admin.com", "wr000ng", "wr000ng");
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
